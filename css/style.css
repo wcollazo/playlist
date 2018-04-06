@@ -1,1 +1,17 @@
 
+body {
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIu9htYveRpO1MeZ9I9LTt4lrojsJdCidrv6Pql5CQ0mHtvVM9");
+    background-size:cover;
+    background-repeat: no-repeat;
+        color: white;
+
+}
+img {
+    width: 25%;
+    height: 25%;
+    
+}
+.c {
+    border: groove;
+    
+}

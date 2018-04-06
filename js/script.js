@@ -17,41 +17,95 @@
 
 // Songs
 var mySong = {
-	"title":"24K Magic",
-	"artist":"Bruno Mars",
-	"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
-	"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
+	"title":"Love Colored Master Spark",
+	"artist":"Zun",
+	"mp3Url":"https://www.youtube.com/watch?v=7RBJ4NMOBV0",
+	"imageUrl":"https://orig00.deviantart.net/d2f3/f/2015/357/8/4/kirisame_marisa_by_crossryou-d9l5imk.jpg",
+	"songLength":"30:00 min"
 }
 
 var myPlayList = [
 	{
-		"title":"24K Magic",
-		"artist":"Bruno Mars",
-		"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
-		"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
+		"title":"Battle Against A True Hero",
+		"artist":"Toby Fox",
+		"mp3Url":"https://www.youtube.com/watch?v=bPCMJC1Ig6s",
+		"imageUrl":"https://pre00.deviantart.net/3174/th/pre/f/2016/006/9/4/undyne_the_undying___the_true_hero_by_walkingmelonsaaa-d9mzxpf.png",
+		"songLength":"30:00 min",
 	},
 	{
-		"title":"Sir Duke",
-		"artist":"Stevie Wonder",
-		"mp3-url":"https://open.spotify.com/track/2udw7RDkldLFIPG9WYdVtT",
-		"image-url":"https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Songs_in_the_key_of_life.jpg/220px-Songs_in_the_key_of_life.jpg",
+		"title":"Running Hell",
+		"artist":"Pixel",
+		"mp3Url":"https://www.youtube.com/watch?v=Vtxp70tVHyM",
+		"imageUrl":"http://www.brainygamer.com/.a/6a00e39824440288330133ec4d519c970b-pi",
+		"songLength":"8:55 min"
 	},
 	{
-		"title":"Sorry",
-		"artist":"Justin Bieber",
-		"mp3-url":"https://open.spotify.com/track/09CtPGIpYB4BrO8qb1RGsF",
-		"image-url":"http://assets-s3.usmagazine.com/uploads/assets/articles/93827-justin-biebers-sorry-choreographer-spills-video-style-secrets-parris-goebel/1445638548_justin-bieber-sorry-dancers-zoom.jpg",
-	}
+		"title":"The Venerable Ancient Battlefield ~ Suwa Foughten Field",
+		"artist":"Zun",
+		"mp3Url":"https://www.youtube.com/watch?v=uXlqR94K0sM",
+		"imageUrl":"https://en.touhouwiki.net/images/thumb/7/75/LoT2_Chara_Reimu_Stand.png/300px-LoT2_Chara_Reimu_Stand.png",
+		"songLength":"8:55 min"
+	},
+	{
+		"title":"In the Final",
+		"artist":"Nintendo",
+		"mp3Url":"https://www.youtube.com/watch?v=uXlqR94K0sM",
+		"imageUrl":"https://i.kinja-img.com/gawker-media/image/upload/s--mK9-tpKW--/c_fit,fl_progressive,q_80,w_320/18j4fzxct8yh3jpg.jpg",
+		"songLength":"30.01 min"
+	},
+	{	
+		"title":"Moonsong",
+		"artist":"pixel",
+		"mp3Url":"https://www.youtube.com/watch?v=HVzC6WZImGY",
+		"imageUrl":"https://lh3.googleusercontent.com/xsEzrLeeBREBrkly1FCkcDuhjQ43wwbscFJJ1tuUOzfRp_CvGcAWjJVNHXvdUe3O-E8=w300",
+		"songLength":"8:34 min"
+	},
+	{
+		"title":"Never let up!",
+		"artist":"Nintendo",
+		"mp3Url":"https://www.youtube.com/watch?v=bR2lft3cduc",
+		"imageUrl":"https://i.kinja-img.com/gawker-media/image/upload/s--mK9-tpKW--/c_fit,fl_progressive,q_80,w_320/18j4fzxct8yh3jpg.jpg",
+		"songLength":" 30:00 min"
+	},
 
 ]
 
 
+// <!-- https://www.pinterest.com/pin/591027151069668646/ -->
 
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
-  
-
-
+	
+	for (var i =0; i< myPlayList.length; i++) {
+    var colorObject = myPlayList[i];
+    
+    var title = colorObject.title;
+    var artist = colorObject.artist;
+    var mp3Url = colorObject.mp3Url;
+    var imageUrl = colorObject.imageUrl;
+    var songLength = colorObject.songLength;
+    
+    
+    $("#b").append("<div class='c'>" + "<p>" + "Song Title: " + title + "</p>" + "Author: " + artist + "<p>" + "Song Link: " + mp3Url + "</p>" + "<p>" + "<img src=" + imageUrl + ">" + "</p>" + "<p>"+ "Length: " + songLength + "</p>" +  "</div>");
+    
+    } 
+	
+	
+	
+	
+	
+	
+	
+  $('#a').append("<h1> Song Name: " + mySong.title + "</h1>");
+	$('#a').append("<a href='#' >" + "<img id='x' src=" + mySong.imageUrl + ">" + " </a>");
+	$("#x").click(function(){
+	//	$('#a').append("");
+		
+		$('#a').append("<audio src='./Songs/Love_coloured_Master_Spark.mp3' autoplay=autoplay loop=loop></audio>");
+		
+		});
+	
+// <img src= "http://i0.kym-cdn.com/photos/images/original/000/688/345/271.jpg">
 
 });
 
